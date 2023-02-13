@@ -1,0 +1,13 @@
+class Solution:
+    def countOdds(self, low: int, high: int) -> int:
+        if high%2==0:
+            num_high=high//2
+        else:
+            num_high=(high//2)+1
+        if low%2==0:
+            num_low=low//2
+        else:
+            num_low=(low//2)+1
+        if low%2!=0:
+            return num_high-num_low+1
+        return num_high-num_low
